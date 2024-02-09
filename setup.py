@@ -39,6 +39,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     license='MIT',
+    url = 'https://github.com/78-quangSky/MyPackage',
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3.10",
