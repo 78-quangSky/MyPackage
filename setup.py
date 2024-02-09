@@ -28,8 +28,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='fablab',
-    version='0.1.0',
+    name='fablab_lib',
+    version='0.1.3',
     packages=find_packages(),
     install_requires=install_requires,
     author='FabLab Innovation',
