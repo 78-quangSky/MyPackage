@@ -261,9 +261,11 @@ class PLC:
             varAddr = varAddr[0] + '0' + varAddr[1]
         # Convert the address 'X0', 'Y0' to the form 'iX0', 'qX0'
         if varAddr[0].lower() == 'x':
-            varAddr = 'ix' + varAddr[1:] 
+            # varAddr = 'ix' + varAddr[1:]
+            varAddr = f'ix{varAddr[1:len(varAddr)-1]}.{varAddr[-1]}' 
         elif varAddr[0].lower() == 'y':
-            varAddr = 'qx' + varAddr[1:]
+            # varAddr = 'qx' + varAddr[1:]
+            varAddr = f'qx{varAddr[1:len(varAddr)-1]}.{varAddr[-1]}'
         
         # Determine the area of the variable
         if varAddr[0].lower() == 'v':
