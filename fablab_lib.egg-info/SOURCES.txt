@@ -91,6 +91,7 @@ fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/error.py
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/exceptions.py
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/logo.py
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/partner.py
+fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/py.typed
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/types.py
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/util.py
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/client/__init__.py
