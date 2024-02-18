@@ -15,6 +15,9 @@ if platform.system() == 'Linux':
     install_requires.extend([
         'python3-numpy',
         'python3-pandas',
+        'RPi.GPIO',
+        'rpi-lcd',
+        'adafruit-circuitpython-ads1x15',
         # Add other Linux-specific dependencies as needed
     ])
 else:
@@ -29,7 +32,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='fablab_lib',
-    version='0.0.5',
+    version='0.1.6',
     packages=find_packages(),
     install_requires=install_requires,
     author='FabLab Innovation',
