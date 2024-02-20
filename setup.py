@@ -32,7 +32,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='fablab_lib',
-    version='0.1.6',
+    version='0.1.8',
     packages=find_packages(),
     install_requires=install_requires,
     author='FabLab Innovation',
@@ -48,5 +48,5 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.10",
+    python_requires=">=3.7",
 )
