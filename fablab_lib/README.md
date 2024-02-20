@@ -1,6 +1,6 @@
-# MyClasses Package
+# fablab_lib Package
 
-The 'MyClasses' package provides a set of classes that can be used for various purposes.
+The 'fablab_lib' package provides a set of classes that can be used for various purposes.
 
 ## Installation
 

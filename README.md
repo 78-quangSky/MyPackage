@@ -1,8 +1,8 @@
-# MyClasses
+# fablab_lib
 
 ## Purpose
 
-MyClasses is a package designed to facilitate communication with Programmable Logic Controllers (PLCs) through industrial protocols.
+fablab_lib is a package designed to facilitate communication with Programmable Logic Controllers (PLCs) through industrial protocols.
 
 ## Features
 
@@ -12,10 +12,10 @@ MyClasses is a package designed to facilitate communication with Programmable Lo
 
 ## Installation
 
-You can install MyClasses via pip:
+You can install fablab_lib via pip:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
-To install the 'MyClasses' package, you can use the following command:
+To install the 'fablab_lib' package, you can use the following command:
 ```pip install fablab_lib```
 
 ## Note
