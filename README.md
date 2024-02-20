@@ -18,5 +18,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) 
 ## Note
 
 To install this lib in Raspberry Pi (Python >= 3.7), you need install following libs before:
+
 ```sudo apt-get install python3-pandas```
+
 ```sudo apt-get install python3-numpy```
