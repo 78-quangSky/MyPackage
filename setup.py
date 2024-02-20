@@ -13,8 +13,6 @@ install_requires = [
 # Linux-specific dependencies to be installed via apt-get
 if platform.system() == 'Linux':
     install_requires.extend([
-        'python3-numpy',
-        'python3-pandas',
         'RPi.GPIO',
         'rpi-lcd',
         'adafruit-circuitpython-ads1x15',
@@ -32,7 +30,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='fablab_lib',
-    version='0.1.8',
+    version='0.2.2',
     packages=find_packages(),
     install_requires=install_requires,
     author='FabLab Innovation',
@@ -45,7 +43,7 @@ setup(
     url = 'https://github.com/78-quangSky/MyPackage',
     classifiers=[
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.7",
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.7",
