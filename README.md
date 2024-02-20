@@ -16,7 +16,7 @@ You can install MyClasses via pip:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
 To install the 'MyClasses' package, you can use the following command:
-```pip install MyClasses```
+```pip install fablab_lib```
 
 ## Note
 

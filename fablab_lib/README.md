@@ -4,5 +4,5 @@ The 'MyClasses' package provides a set of classes that can be used for various p
 
 ## Installation
 
-To install the 'MyClasses' package, you can use the following command:
-```pip install MyClasses```
+To install the 'fablab_lib' package, you can use the following command:
+```pip install fablab_lib```
