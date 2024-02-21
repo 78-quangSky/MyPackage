@@ -92,7 +92,8 @@ class MQTT:
         self.on_disconnect = None
         self.on_message = None
 
-        self.en_subscribe = False
+        self.en_subscribe = False   # Enable subscribe to standard topic
+        self.en_lastwill = False    # Enable last will message
 
 
     def _on_connect(self, client, userdata, flags, rc):
@@ -209,8 +210,9 @@ class MQTT:
             logger.error('Standard topic is not set.')
             raise ValueError('Standard topic is not set.')
         
-        # if machine is immediately turned off --> last_will sends 'Status: Off' to topic
-        self._mqtt.will_set(self.standardTopic + 'machineStatus', str(generate_data('machineStatus', ST.Off)), 1, 1)
+        if self.en_lastwill:
+            # if machine is immediately turned off --> last_will sends 'Status: Off' to topic
+            self._mqtt.will_set(self.standardTopic + 'machineStatus', str(generate_data('machineStatus', ST.Off)), 1, 1)
         
         # MQTT Connect
         logger.info('Trying to connect MQTT broker %s:%d' % (self.host, self.port))
@@ -257,8 +259,8 @@ class MQTT:
             payload = str(generate_data(Name, Value))
         logger.info(f'Publishing data to topic {topic}: \n{payload}')
         # print(str(payload))
-        with lock:
-            self._mqtt.publish(topic, payload, 1, 1)
+        # with lock:
+        self._mqtt.publish(topic, payload, 1, 1)
 
 
     def subscribe(self, topic: str):
