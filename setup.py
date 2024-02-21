@@ -30,7 +30,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='fablab_lib',
-    version='0.2.2',
+    version='0.2.3',
     packages=find_packages(),
     install_requires=install_requires,
     author='FabLab Innovation',
