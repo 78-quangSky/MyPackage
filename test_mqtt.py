@@ -24,19 +24,19 @@ client3.connect()
 
 def task1():
     while True:
-        random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=20))
+        random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=30))
         client1.publish_data('task' + str(random.randint(1,3)), random_string)
         time.sleep(0.05)
 
 def task2():
     while True:
-        random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=15))
+        random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=25))
         client2.publish_data('task' + str(random.randint(4,6)), random_string)
         time.sleep(0.07)
 
 def task3():
     while True:
-        random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=25))
+        random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=35))
         client3.publish_data('task' + str(random.randint(7,9)), random_string)
         time.sleep(0.1)
 
