@@ -1,6 +1,6 @@
-from MyClasses import MQTT, spB
-from MyClasses import restart_raspberry
-from MyClasses import generate_general_data
+from fablab_lib import MQTT, spB
+from fablab_lib import restart_raspberry
+from fablab_lib import generate_general_data
 from WB_P2_OMCK_ClotActivator_Variables import *
 from WB_P2_OMCK_ClotActivator_PLC import *
 from datetime import datetime, timedelta
@@ -41,7 +41,7 @@ def on_disconnect(client, rc):
         print('Unexpected disconnection from MQTT broker')
         ST.is_connectWifi = 0
 
-mqttBroker = '20.249.217.5'  # cloud
+mqttBroker = '40.82.154.13'  # cloud
 mqttPort = 1883
 client = MQTT(host=mqttBroker, port=mqttPort, user="user", password="password")
 client.standardTopic = topic_standard

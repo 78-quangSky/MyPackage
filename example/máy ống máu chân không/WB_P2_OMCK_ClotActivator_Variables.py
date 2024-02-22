@@ -1,4 +1,4 @@
-from MyClasses import LogFileCSV
+from fablab_lib import LogFileCSV
 import threading
 
 # Check if the program is running on a PC or Raspberry Pi

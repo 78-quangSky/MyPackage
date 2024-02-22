@@ -3,7 +3,7 @@ from fablab_lib import spB
 from fablab_lib import restart_raspberry
 import ast
 
-serverUrl = "20.249.217.5"
+serverUrl = "40.82.154.13"
 omGroupId = "group1"
 omNodeId = "N03"
 omDeviceId = "DV01"

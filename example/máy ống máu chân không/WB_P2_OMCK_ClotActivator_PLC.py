@@ -1,4 +1,4 @@
-from MyClasses import PLC_S7_200
+from fablab_lib import PLC_S7_200
 from WB_P2_OMCK_ClotActivator_Variables import* 
 
 _HOST = '192.168.0.60'
