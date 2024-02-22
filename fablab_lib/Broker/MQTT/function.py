@@ -95,6 +95,8 @@ class MQTT:
         self.en_subscribe = False   # Enable subscribe to standard topic
         self.en_lastwill = False    # Enable last will message
 
+        self.topicSub = None        # Topic to subscribe to
+
 
     def _on_connect(self, client, userdata, flags, rc):
         """
@@ -111,8 +113,19 @@ class MQTT:
         if self.en_subscribe:
             # Subscribe to standard topic
             topic = self.standardTopic
-            self._mqtt.subscribe(topic)
-            logger.info("Subscribed to MQTT topic: %s" % (topic))
+            if self.topicSub is not None:
+                topic = self.topicSub
+                # Check if topic is list
+                if topic is list:
+                    for t in topic:
+                        self._mqtt.subscribe(t)
+                        logger.info("Subscribed to MQTT topic: %s" % (t))
+                else:
+                    self._mqtt.subscribe(topic)
+                    logger.info("Subscribed to MQTT topic: %s" % (topic))
+            else:
+                self._mqtt.subscribe(topic)
+                logger.info("Subscribed to MQTT topic: %s" % (topic))
         
         # If on_connect callback is set, call it with the result code
         if self.on_connect is not None:

@@ -45,6 +45,7 @@ mqttBroker = '40.82.154.13'  # cloud
 mqttPort = 1883
 client = MQTT(host=mqttBroker, port=mqttPort, user="user", password="password")
 client.standardTopic = topic_standard
+client.en_lastwill = True
 client.on_connect = on_connect
 client.on_disconnect = on_disconnect
 client.connect()

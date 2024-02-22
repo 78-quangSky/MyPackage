@@ -36,6 +36,7 @@ class E5CC:
             # port='/dev/serial0',      # module RS485 thường on RPi
             # port='/dev/ttyUSB0',      # module RS485 USB on RPi
             # port='COM3',              # module RS485 USB on Windows
+            # port='/dev/ttyAMA0',
             port=port,
             baudrate=baudrate,
             parity=parity,
