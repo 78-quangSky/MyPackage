@@ -42,6 +42,7 @@ fablab_lib/Broker/SparkPlugB/mqtt_spb_wrapper/spb_core/__init__.py
 fablab_lib/Broker/SparkPlugB/mqtt_spb_wrapper/spb_core/sparkplug_b.py
 fablab_lib/Broker/SparkPlugB/mqtt_spb_wrapper/spb_core/sparkplug_b_pb2.py
 fablab_lib/Broker/SparkPlugB/mqtt_spb_wrapper/spb_core/sparkplug_b_tools.py
+fablab_lib/HeatController/__init__.py
 fablab_lib/LogData/__init__.py
 fablab_lib/LogData/function.py
 fablab_lib/PLC/__init__.py
@@ -97,5 +98,7 @@ fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/util.py
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/client/__init__.py
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/server/__init__.py
 fablab_lib/PLC/Siemens/snap7/Ethernet/snap7/server/__main__.py
+fablab_lib/Protocols/__init__.py
+fablab_lib/Protocols/Modbus/__init__.py
 fablab_lib/RaspberryPi/__init__.py
 fablab_lib/RaspberryPi/function.py

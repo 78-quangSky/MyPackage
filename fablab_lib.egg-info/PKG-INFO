@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: fablab-lib
-Version: 0.2.4
+Version: 0.2.5
 Summary: A package for communicating with PLC via industrial protocols such as OPC UA, Modbus, etc.         and logging data to a CSV file.
 Home-page: https://github.com/78-quangSky/MyPackage
 Author: FabLab Innovation
