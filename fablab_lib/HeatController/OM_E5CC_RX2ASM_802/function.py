@@ -33,6 +33,9 @@ class E5CC:
         :param timeout: the timeout value for serial communication (default: 1)
         """
         self.ser = serial.Serial(
+            # port='/dev/serial0',      # module RS485 thường on RPi
+            # port='/dev/ttyUSB0',      # module RS485 USB on RPi
+            # port='COM3',              # module RS485 USB on Windows
             port=port,
             baudrate=baudrate,
             parity=parity,
