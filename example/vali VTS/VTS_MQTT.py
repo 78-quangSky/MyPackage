@@ -47,7 +47,6 @@ def on_message(dataPayload, mqttName, mqttValue, mqttTimestamp):
             write_data(nodeID, mqtt_name, mqtt_value)
             
 
-
 mqttBroker = '40.82.154.13'  # cloud
 mqttPort = 1883
 client = MQTT(host=mqttBroker, port=mqttPort)

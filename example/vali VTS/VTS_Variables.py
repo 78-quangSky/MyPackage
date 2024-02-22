@@ -23,7 +23,7 @@ class ST:
     Ethernet_disconnect = 8         # Ethernet disconnect state
     is_connectWifi = 0              # WiFi connect state
     status_old = -1                 # Old status
-    
+
 # --------------------- User variable --------------------------------------
 
 var_list = ['ns=4;i=7', 'ns=4;i=6', 'ns=4;i=8', 'ns=4;i=14', 'ns=4;i=15', 'ns=4;i=16', 'ns=4;i=12', 'ns=4;i=13', 
@@ -32,4 +32,3 @@ var_list = ['ns=4;i=7', 'ns=4;i=6', 'ns=4;i=8', 'ns=4;i=14', 'ns=4;i=15', 'ns=4;
             'ns=4;i=40', 'ns=4;i=41', 'ns=4;i=42', 'ns=4;i=39']
 
 name_list = [""]*len(var_list)
-sub_mqtt_value_list = [0]*len(var_list)
