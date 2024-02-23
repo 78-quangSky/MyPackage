@@ -92,7 +92,10 @@ class MQTT:
         self.on_disconnect = None
         self.on_message = None
 
-        self.en_subscribe = False
+        self.en_subscribe = False   # Enable subscribe to standard topic
+        self.en_lastwill = False    # Enable last will message
+
+        self.topicSub = None        # Topic to subscribe to
 
 
     def _on_connect(self, client, userdata, flags, rc):
@@ -110,8 +113,19 @@ class MQTT:
         if self.en_subscribe:
             # Subscribe to standard topic
             topic = self.standardTopic
-            self._mqtt.subscribe(topic)
-            logger.info("Subscribed to MQTT topic: %s" % (topic))
+            if self.topicSub is not None:
+                topic = self.topicSub
+                # Check if topic is list
+                if topic is list:
+                    for t in topic:
+                        self._mqtt.subscribe(t)
+                        logger.info("Subscribed to MQTT topic: %s" % (t))
+                else:
+                    self._mqtt.subscribe(topic)
+                    logger.info("Subscribed to MQTT topic: %s" % (topic))
+            else:
+                self._mqtt.subscribe(topic)
+                logger.info("Subscribed to MQTT topic: %s" % (topic))
         
         # If on_connect callback is set, call it with the result code
         if self.on_connect is not None:
@@ -209,8 +223,9 @@ class MQTT:
             logger.error('Standard topic is not set.')
             raise ValueError('Standard topic is not set.')
         
-        # if machine is immediately turned off --> last_will sends 'Status: Off' to topic
-        self._mqtt.will_set(self.standardTopic + 'machineStatus', str(generate_data('machineStatus', ST.Off)), 1, 1)
+        if self.en_lastwill:
+            # if machine is immediately turned off --> last_will sends 'Status: Off' to topic
+            self._mqtt.will_set(self.standardTopic + 'machineStatus', str(generate_data('machineStatus', ST.Off)), 1, 1)
         
         # MQTT Connect
         logger.info('Trying to connect MQTT broker %s:%d' % (self.host, self.port))
@@ -257,8 +272,8 @@ class MQTT:
             payload = str(generate_data(Name, Value))
         logger.info(f'Publishing data to topic {topic}: \n{payload}')
         # print(str(payload))
-        with lock:
-            self._mqtt.publish(topic, payload, 1, 1)
+        # with lock:
+        self._mqtt.publish(topic, payload, 1, 1)
 
 
     def subscribe(self, topic: str):

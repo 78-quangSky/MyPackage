@@ -51,6 +51,8 @@ def task_reconnect_ethernetPLC():
 		if lsname is not None:
 			for i in range(len(lsname)):
 				client.publish_data(lsname[i], lsPayload[i], is_payload=True)
+			lsname.clear()
+			lsPayload.clear()
 
 		alwaysOn = 'VX200.1'
 		# Wait for PLC to reconnect

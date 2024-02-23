@@ -11,7 +11,7 @@ topic_standard = 'Test/WB-OMCK/ClotActivator/Data/'
 # --------------------------- Publish data -------------------------------------
 def publish_data(varName, varAddr, varValue, KindOfData):
     if KindOfData == 'Alarm':
-        client.publish_data(varAddr, varValue)
+        client.publish_data(varAddr, varValue, NameOfTopic=varName)
     else:
         client.publish_data(varName, varValue)
     Log.log_data(varName, varAddr, varValue, KindOfData, ST.is_connectWifi)

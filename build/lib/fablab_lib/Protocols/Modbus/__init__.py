@@ -11,4 +11,3 @@ from .Broker.MQTT.function import MQTT, ST
 from .Broker.JsonPayload.function import generate_data, generate_data_status, generate_general_data
 from .LogData.function import LogFileCSV
 from .RaspberryPi.function import restart_program, restart_raspberry
-from .HeatController.OM_E5CC_RX2ASM_802.function import E5CC

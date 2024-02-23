@@ -43,6 +43,8 @@ fablab_lib/Broker/SparkPlugB/mqtt_spb_wrapper/spb_core/sparkplug_b.py
 fablab_lib/Broker/SparkPlugB/mqtt_spb_wrapper/spb_core/sparkplug_b_pb2.py
 fablab_lib/Broker/SparkPlugB/mqtt_spb_wrapper/spb_core/sparkplug_b_tools.py
 fablab_lib/HeatController/__init__.py
+fablab_lib/HeatController/OM_E5CC_RX2ASM_802/__init__.py
+fablab_lib/HeatController/OM_E5CC_RX2ASM_802/function.py
 fablab_lib/LogData/__init__.py
 fablab_lib/LogData/function.py
 fablab_lib/PLC/__init__.py

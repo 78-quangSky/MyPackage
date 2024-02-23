@@ -10,7 +10,6 @@ else:
     filepath = 'home/pi/MNC/'
 
 # Log file for storing data
-# filename = 'stored_data.csv'
 filename = 'stored_data.csv'
 Log = LogFileCSV(fileName=filename, filePath=filepath)
 
