@@ -8,7 +8,6 @@ thông qua __token__ đã tạo mà không cần mật khẩu, tài khoản
 
 """
 python setup.py sdist
-twine upload dist/*
 """
 
 

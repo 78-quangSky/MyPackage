@@ -338,13 +338,13 @@ if __name__ == '__main__':
     # t8 = threading.Thread(target=run_task_data_setting_process)
     task_reconnect_ehtPLC = threading.Thread(target=task_reconnect_ethernetPLC)
 
-    t4.daemon = True
-    
+    # t4.daemon = True
+
     t1.start()
     t2.start()
     t3.start()
     t4.start()
-    # t5.start()
+    t5.start()
     t6.start()
     # t7.start()
     # t8.start()
@@ -354,7 +354,7 @@ if __name__ == '__main__':
     t2.join()
     t3.join()
     t4.join()
-    # t5.join()
+    t5.join()
     t6.join()
     # t7.join()
     # t8.join()
